@@ -1,0 +1,32 @@
+This problem concerns the use of ROP gadgets to find 6! and print the results.
+------------------------------------------------------------------------------------
+1. Download and install ROP gadget from https://github.com/JonathanSalwan/ROPgadget. 
+This may require you to also install capstone. Please see the readme file in the git hub.
+
+2. Turn off ASLR for your Linux kernel (refer class slides).
+
+3. Compile the C code given with the following options: 
+
+$ gcc -m32 -O0 -fno-stack-protector -static tut3.c -o tut3. 
+
+This will create a 32 bit executable with statically linked libraries.
+
+
+4. Execute ROP gadget on tut2 using the command 
+
+$ python ROPgadget.pY -binary tut3. 
+
+Have a look at -help in ROPgadget.py for many more interesting options.
+
+5. Pick your gadgets, stitch them together on the stack, so that 6! is printed on the screen. One way is to fill the result in the glb global variable, which gets printed in main
+
+
+6. Submit the following:
+(a) Label of exploit string: <<your folder name>>
+    For  example if your folder is C17B104_CS17B042, then this should 
+    be the name of your exploit file
+(b) Save the file in the folder for the assignment
+(c) Submit the same exploit string on moodle.
+(d) Write a document about the ROP gadgets and ROP chain that you used. This should also be submitted in moodle
+
+
