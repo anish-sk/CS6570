@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main(){
-	char buf[30];
+	char buf[256];
 	while(1){
-		fgets(buf, 30, stdin);
+		fgets(buf, 256, stdin);
 		printf(buf);
 	}
 }

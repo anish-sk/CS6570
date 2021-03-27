@@ -1,0 +1,3 @@
+echo $PPID >| pid.txt
+kill $(< pid.txt)
+exec sh

