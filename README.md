@@ -1,7 +1,7 @@
 # CS6570
 Assignments for the course CS6570 Secure Systems Engineering Jan - May 2021 
 
-### Lab 1
+## Lab 1
 
 You have 3 problems
 
@@ -25,7 +25,7 @@ when executed will win.
 * The string should be stored in the shared google folder with the same
 name as the program.
 
-### Lab 2
+## Lab 2
 You have to do the following :
 
 For : _t1_           (5 marks)
@@ -40,7 +40,7 @@ You are given an executable. You would need to (1) identify the vulnerability
 
 You can use the Return-to-libc attack that we did in class.
 
-### Lab 3
+## Lab 3
 This problem concerns the use of ROP gadgets to find 6! and print the results.
 ------------------------------------------------------------------------------------
 1. Download and install ROP gadget from https://github.com/JonathanSalwan/ROPgadget. 
@@ -63,7 +63,7 @@ Have a look at -help in ROPgadget.py for many more interesting options.
 
 5. Pick your gadgets, stitch them together on the stack, so that 6! is printed on the screen. One way is to fill the result in the glb global variable, which gets printed in main
 
-### Lab 4
+## Lab 4
 This problem concerns format string vulnerabiltities
 ------------------------------------------------------------------------------------
 1. Look at echo.c. There is a vulnerability. Use it to open a shell.
@@ -78,7 +78,7 @@ This problem concerns format string vulnerabiltities
 (c) Submit the same exploit string on moodle.
 (d) Write a document about how you went about doing the lab
 
-### Lab 5
+## Lab 5
 -- dream team --
 
 This application lets you build your dream cricket team. The team
@@ -86,3 +86,5 @@ has 10 players and one secret player. Use a vulnerability in the
 program to fill in and your name (or your partner's name) as the
 secret player.
 
+## Reading Project
+https://drive.google.com/drive/folders/1IVsrwFeez5YKr1SSzyY0D8gKaF_8sc4I?usp=sharing
